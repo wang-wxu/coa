@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Remaining Days Calculator</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .bar {
+            background-color: #4CAF50;
+            height: 40px;
+            margin: 5px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            //font-size: small;
+            font-size: 14px;
+        }
+        /* Style input fields, buttons, and bars as needed */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Life Remaining Days Calculator</h2>
+
+<h3>Enter your date of birth:</h3>
+    <input type="date" id="dob" onchange="calculate()">
+<h3>Remaining days until you are 60,70,80,90,100 years old.</h3>
+    <div id="output"></div>
+    </div>
+
+    <script>
+       function calculate() {
+            var dob = new Date(document.getElementById('dob').value);
+            var output = document.getElementById('output');
+            output.innerHTML = '';
+            [60, 70, 80, 90, 100].forEach(function(age) {
+                var future = new Date(dob);
+                future.setFullYear(dob.getFullYear() + age);
+                var remaining = Math.floor((future - new Date()) / (1000 * 60 * 60 * 24));
+                var bar = document.createElement('div');
+                bar.className = 'bar';
+                bar.style.width = (remaining / 365.25 / age * 100) + '%';
+                //bar.style.backgroundColor = 'hsl(' + (120 - age) + ', 100%, 50%)';
+                //bar.style.backgroundColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+                bar.style.backgroundColor = 'hsl(' + (120 - age * 1.2) + ', 100%, 50%)';
+                //bar.textContent = 'Until ' + age + ': ' + remaining;
+                bar.textContent = age + ': ' + remaining + ' days';
+                output.appendChild(bar);
+            });
+        }
+    </script>
+</body>
+</html>
