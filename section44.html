@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="description" content="" />
+  <meta name="author" content="Tooplate" />
+
+  <title>Computer Organization</title>
+
+  <!-- CSS FILES -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;700&display=swap" rel="stylesheet" />
+
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+  <link href="css/bootstrap-icons.css" rel="stylesheet" />
+
+  <link href="css/apexcharts.css" rel="stylesheet" />
+
+  <link href="css/tooplate-mini-finance.css" rel="stylesheet" />
+
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+  <!--
+
+Tooplate 2135 Mini Finance
+
+https://www.tooplate.com/view/2135-mini-finance
+
+Bootstrap 5 Dashboard Admin Template
+
+-->
+</head>
+
+<body>
+  <header class="navbar sticky-top flex-md-nowrap">
+    <div class="col-md-3 col-lg-3 me-0 px-3 fs-6">
+      <a class="navbar-brand" href="#">
+        <i class="bi-box"></i>
+        Computer Organization and Architecture
+      </a>
+    </div>
+
+    <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse"
+      data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- <form class="custom-form header-form ms-lg-3 ms-md-3 me-lg-auto me-md-auto order-2 order-lg-0 order-md-0" action="#" method="get" role="form">
+                <input id="search-input" class="form-control" name="search" type="text" placeholder="Search" aria-label="Search">
+            </form> -->
+
+    <div class="navbar-nav me-lg-2">
+      <div class="nav-item text-nowrap d-flex align-items-center">
+        <div class="dropdown ps-3">
+          <a class="nav-link dropdown-toggle text-center" href="#" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false" id="navbarLightDropdownMenuLink">
+            <i class="bi-bell"></i>
+            <span class="position-absolute start-100 translate-middle p-1 bg-danger border border-light rounded-circle">
+              <span class="visually-hidden">New alerts</span>
+            </span>
+          </a>
+
+          <ul class="dropdown-menu dropdown-menu-lg-end notifications-block-wrap bg-white shadow"
+            aria-labelledby="navbarLightDropdownMenuLink">
+            <small>Notifications</small>
+
+            <li class="notifications-block border-bottom pb-2 mb-2">
+              <a class="dropdown-item d-flex align-items-center" href="#">
+                <div class="notifications-icon-wrap bg-success">
+                  <i class="notifications-icon bi-check-circle-fill"></i>
+                </div>
+
+                <div>
+                  <span>持续更新中</span>
+                  <!-- <span>Your account has been created successfuly.</span> -->
+                  <!-- <p>12 days ago</p> -->
+                </div>
+              </a>
+            </li>
+
+            <!-- <li class="notifications-block border-bottom pb-2 mb-2">
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="notifications-icon-wrap bg-info">
+                                        <i class="notifications-icon bi-folder"></i>
+                                    </div>
+
+                                    <div>
+                                        <span>Please check. We have sent a Daily report.</span>
+
+                                        <p>10 days ago</p>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="notifications-block">
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="notifications-icon-wrap bg-danger">
+                                        <i class="notifications-icon bi-question-circle"></i>
+                                    </div>
+
+                                    <div>
+                                        <span>Account verification failed.</span>
+
+                                        <p>1 hour ago</p>
+                                    </div>
+                                </a>
+                            </li> -->
+          </ul>
+        </div>
+
+        <div class="dropdown ps-1">
+          <a class="nav-link dropdown-toggle text-center" href="#" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <i class="bi-three-dots-vertical"></i>
+          </a>
+
+          <div class="dropdown-menu dropdown-menu-social bg-white shadow">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-4 col-md-4 col-4">
+                  <a class="dropdown-item text-center" href="https://www.runoob.com/">
+                    <img src="images/social/runoob.png" class="profile-image img-fluid" alt="" />
+                    <span class="d-block">runoob</span>
+                  </a>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-4">
+                  <a class="dropdown-item text-center" href="https://cn.bing.com/">
+                    <img src="images/social/bing.jpg" class="profile-image img-fluid" alt="" />
+                    <span class="d-block">bing</span>
+                  </a>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-4">
+                  <a class="dropdown-item text-center" href="https://github.com/">
+                    <img src="images/social/github.png" class="profile-image img-fluid" alt="" />
+                    <span class="d-block">github</span>
+                  </a>
+                </div>
+
+                <!-- <div class="col-lg-4 col-md-4 col-4">
+                                        <a class="dropdown-item text-center" href="#">
+                                            <img src="images/social/snapchat.png" class="profile-image img-fluid" alt="">
+                                            <span class="d-block">Snapchat</span>
+                                        </a>
+                                    </div>
+
+                                    <div class="col-lg-4 col-md-4 col-4">
+                                        <a class="dropdown-item text-center" href="#">
+                                            <img src="images/social/tiktok.png" class="profile-image img-fluid" alt="">
+                                            <span class="d-block">Tiktok</span>
+                                        </a>
+                                    </div>
+
+                                    <div class="col-lg-4 col-md-4 col-4">
+                                        <a class="dropdown-item text-center" href="#">
+                                            <img src="images/social/youtube.png" class="profile-image img-fluid" alt="">
+                                            <span class="d-block">Youtube</span>
+                                        </a>
+                                    </div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dropdown px-3">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="images/taihu.jpg" class="profile-image img-fluid" alt="" />
+          </a>
+          <ul class="dropdown-menu bg-white shadow">
+            <li>
+              <div class="dropdown-menu-profile-thumb d-flex">
+                <img src="images/better.png" class="profile-image img-fluid me-3" alt="" />
+
+                <div class="d-flex flex-column">
+                  <small>Wang</small>
+                  <a href="#">wangw@wxu.edu.cn</a>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <a class="dropdown-item" href="http://gxy.wxu.edu.cn/">
+                <!-- <i class="bi-person me-2"></i> -->
+                <!-- Profile -->
+                School of IoT Engineering
+              </a>
+            </li>
+
+            <li>
+              <a class="dropdown-item" href="http://www.wxu.edu.cn/">
+                <!-- <i class="bi-gear me-2"></i>
+                                    Settings -->
+                Wuxi Taihu University
+              </a>
+            </li>
+
+            <!-- <li>
+                                <a class="dropdown-item" href="help-center.html">
+                                    <i class="bi-question-circle me-2"></i>
+                                    Help
+                                </a>
+                            </li>
+
+                            <li class="border-top mt-3 pt-2 mx-4">
+                                <a class="dropdown-item ms-0 me-0" href="#">
+                                    <i class="bi-box-arrow-left me-2"></i>
+                                    Logout
+                                </a>
+                            </li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container-fluid">
+    <div class="row">
+      <nav id="sidebarMenu" class="col-md-3 col-lg-3 d-md-block sidebar collapse">
+        <div class="position-sticky py-4 px-3 sidebar-sticky">
+          <ul class="nav flex-column h-100">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">
+                <i class="bi-house-fill me-2"></i>
+                课程概述
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="section11.html">
+                <i class="bi-wallet me-2"></i>
+                绪论
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="section22.html">
+                <i class="bi-wallet me-2"></i>
+                运算器
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="section33.html">
+                <i class="bi-wallet me-2"></i>
+                存贮器
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="section44.html">
+                <i class="bi-wallet me-2"></i>
+                指令&CPU
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="bi-wallet me-2"></i>
+                I/O系统
+              </a>
+            </li>
+
+            <!-- <li class="nav-item">
+                                <a class="nav-link" href="profile.html">
+                                    <i class="bi-person me-2"></i>
+                                    Profile
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="setting.html">
+                                    <i class="bi-gear me-2"></i>
+                                    Settings
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="help-center.html">
+                                    <i class="bi-question-circle me-2"></i>
+                                    Help Center
+                                </a>
+                            </li> -->
+
+            <!-- <li class="nav-item featured-box mt-lg-5 mt-4 mb-4"> -->
+            <li class="custom-block custom-block-profile-front custom-block-profile text-center bg-white">
+              <a href="http://gxy.wxu.edu.cn/">
+                <img src="images/iot.png" class="img-fluid" alt="" />
+              </a>
+              <!-- <a class="btn custom-btn" href="#">IoT Engineering</a> -->
+            </li>
+
+            <li class="nav-item border-top mt-auto pt-2">
+              <a class="nav-link" href="http://gxy.wxu.edu.cn/">
+                <!-- <i class="bi-box-arrow-left me-2"></i> -->
+                School of Internet of Things Engineering
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <main class="main-wrapper col-md-9 ms-sm-auto py-4 col-lg-9 px-md-4 border-start" id="main-content">
+        <div class="title-group mb-3">
+          <h1 class="h2 mb-0">指令&CPU</h1>
+          <!-- <p>计算机组成与结构</p> -->
+
+          <!-- <small class="text-muted">计算机组成与结构</small> -->
+        </div>
+
+        <div class="custom-block bg-white">
+           
+          <!-- <p class="contentformula">\( (3\mathrm{A})_{16}=(00111010)_2 \)</p> -->
+          
+          <!-- <p class="contentformula">$$ \textit{the range from 0 to 2}^w-1 $$</p> -->
+          
+          <p class="content00">Computer Instructions</p>
+          <p class="content01">计算机指令</p>
+          <p class="content01">Computer instructions are a set of machine language instructions that a particular processor understands and executes. A computer performs tasks on the basis of the instruction provided.</p>
+          <p class="content01">计算机指令是由特定处理器理解并执行的一组机器语言指令。计算机根据所提供的指令执行任务。</p>
+          <p class="content01">An instruction comprises of groups called fields.   These fields include: The Operation code (Opcode) field which specifies the operation to be performed.   The Address field which contains the location of the operand, i.e., register or memory location.located.  The Mode field which specifies how the operand will be located.</p>
+          <p class="content01">一条指令由称为字段的组组成。这些字段包括:操作代码(Opcode)字段，指定要执行的操作。地址字段包含操作数的位置，例如寄存器或内存的位置。模式(Mode)字段，指定如何定位操作数。</p>
+          <img class="img01" style="width: 60%;" src="images/slide4/s001.png" />
+          <p class="content01">A basic computer has three instruction code formats which are: Memory - reference instruction, Register- reference instruction, Input-Output instruction.</p>
+          <p class="content01">一台基本的计算机有三种指令码格式:存储器-引用指令、寄存器-引用指令、输入-输出指令。</p>
+          <p class="content00">Memory Reference</p>
+          <p class="content01">These instructions refer to memory address as an operand. The other operand is always accumulator. Specifies 12-bit address, 3-bit opcode (other than 111) and 1-bit addressing mode for direct and indirect addressing.</p>
+          <p class="content01">这些指令将内存地址作为操作数。另一个操作数总是累加器。指定12位地址、3位操作码(111除外)和1位寻址模式，用于直接寻址和间接寻址。</p>
+          <img class="img01" style="width: 60%;" src="images/slide4/s002.png" />
+          <p class="content00">Register Reference</p>
+          <p class="content01">These instructions perform operations on registers rather than memory addresses. The IR(14 - 12) is 111 (differentiates it from memory reference) and IR(15) is 0 (differentiates it from input/output instructions). The rest 12 bits specify register operation.</p>
+          <p class="content01">这些指令在寄存器而不是内存地址上执行操作。IR(14 - 12)为111(区别于内存引用)，IR(15)为0(区别于输入/输出指令)。其余12位指定寄存器操作。</p>
+          <img class="img01" style="width: 60%;" src="images/slide4/s004.png" />
+          <p class="content01">Input-Output Reference</p>
+          <p class="content01">These instructions are for communication between computer and outside environment.  The IR(14 - 12) is 111 (differentiates it from memoryreference) and IR(15) is 1 (differentiates it from register reference instructions).  The rest 12 bits specify I/O operation.</p>
+          <p class="content01">这些指令用于计算机与外部环境之间的通信。IR(14 - 12)是111(区别于内存引用)，IR(15)是1(区别于寄存器引用指令)。其余12位指定I/O操作。</p>
+          <img class="img01" style="width: 60%;" src="images/slide4/s005.png" />
+          <p class="content00">Instruction Set Completeness</p>
+          <p class="content01">指令集完整性</p>
+          <p class="content01">A set of instructions is said to be complete if the computer includes a sufficient number of instructions in each of the following categories:  Arithmetic, logical and shift instructions. A set of instructions for moving information to and from memory and processor registers. Instructions which controls the program together with instructions that check status conditions. Input and Output instructions.</p>
+          <p class="content01">如果计算机在下列每一类指令中都包含足够数量的指令，则称指令集是完整的：算术指令，逻辑和移位指令。传输指令，用于在存储器和处理器寄存器之间来回移动信息。控制指令，用于控制程序和检查状态条件。输入和输出指令。</p>
+          <img class="img01" style="width: 60%;" src="images/slide4/s006.png" />
+          <p class="content00">Addressing Modes</p>
+          <p class="content01">寻址模式</p>
+          <p class="content01">The term addressing modes refers to the way in which the operand of an instruction is specified. The addressing mode specifies a rule for interpreting or modifying the address field of the instruction before the operand is actually executed.</p>
+          <p class="content01">寻址模式是指定指令的操作数的方式。寻址模式指定了在实际执行操作数之前解释或修改指令地址字段的规则。</p>
+          <p class="content01">Addressing modes for 8086 instructions are divided into two categories: Addressing modes for data.  Addressing modes for branch.</p>
+          <p class="content01">8086指令的寻址模式分为两类:数据寻址模式。分支寻址模式。</p>
+          <p class="content01">The 8086 memory addressing modes provide flexible access to memory, allowing you to easily access variables, arrays, records, pointers, and other complex data types.  The key to good assembly language programming is the proper use of memory addressing modes.</p>
+          <p class="content01">8086内存寻址模式提供了对内存的灵活访问，允许您轻松访问变量、数组、记录、指针和其他复杂数据类型。良好的汇编语言编程的关键是正确使用内存寻址模式。</p>
+          <p class="content01">An assembly language program instruction consists of two parts: Opcode, Operand.</p>
+          <p class="content01">汇编语言程序指令由两部分组成：操作码和操作数。</p>
+          <p class="content01">The memory address of an operand consists of two components: Starting address of memory segment.  Effective address or Offset: An offset is determined by adding any combination of three address elements: displacement, base and index.</p>
+          <p class="content01">操作数的内存地址由两部分组成：内存段的起始地址。有效地址或偏移量：通过位移、基数和索引三个地址元素的任意组合来确定。</p>
+          <p class="content00">Implied mode</p>
+          <p class="content01">隐式寻址</p>
+          <p class="content01">In implied addressing the operand is specified in the instruction itself. In this mode the data is 8 bits or 16 bits long and data is the part of instruction. Zero address instruction are designed with implied addressing mode.</p>
+          <p class="content01">在隐式寻址中，操作数在指令本身中指定。在这种模式下，数据是8位或16位长，数据是指令的一部分。零地址指令采用隐式寻址方式设计。</p>
+          <p class="contentformula">$$ \text{Example: CLC (used to reset Carry flag to 0)} $$</p>
+          <p class="content00">Immediate addressing mode</p>
+          <p class="content01">立即寻址</p>
+          <p class="content01">In this mode data is present in address field of instruction.  Note: Limitation in the immediate mode is that the range of constants are restricted by size of address field.</p>
+          <p class="content01">在这种模式下，数据直接呈现在指令的地址字段中。注意：立即寻址的限制是数据的范围受地址字段大小的限制。</p>
+          <p class="contentformula">$$ \text{Example: MOV AL, 35H (move the data 35H into AL register)} $$</p>
+          <p class="content00">Register mode</p>
+          <p class="content01">寄存器寻址</p>
+          <p class="content01">In register addressing the operand is placed in one of 8 bit or 16 bitd general purpose registers. The data is in the register that is specified by the instruction.</p>
+          <p class="content01">在寄存器寻址中，操作数被放置在8位或16位通用寄存器中。数据在指令指定的寄存器中。</p>
+          <p class="contentformula">$$ \text{Example: MOV AX,CX (move the contents of CX register to AX register)} $$</p>
+          <p class="content01">Register indirect mode</p>
+          <p class="content01">寄存器间接寻址</p>
+          <p class="content01">In this addressing the operand's offset is placed in any one of the registers BX,BP,SI,DI as specified in the instruction. The effective address of the data is in the base register or an index register that is specified by the instruction.</p>
+          <p class="content01">在这个寻址中，操作数的偏移量被放置在指令中指定的寄存器BX、BP、SI、DI中的任何一个寄存器中。数据的有效地址位于指令指定的基寄存器或索引寄存器中。</p>
+          <p class="contentformula">$$ \text{Example: MOV AX, [BX](move the contents of memory location addressed by the register BX to the register AX)} $$</p>
+          <p class="content00">Auto Indexed (increment mode)</p>
+          <p class="content01">自增寻址</p>
+          <p class="content01">Effective address of the operand is the contents of a register specified in the instruction. After accessing the operand, the contents of this register are automatically incremented to point to the next consecutive memory location.(R1)+.</p>
+          <p class="content01">操作数的有效地址是指令中指定的寄存器的内容。访问操作数后，该寄存器的内容自动加1，指向下一个连续的内存位置(R1)+。</p>
+          <p class="content00">Auto indexed (decrement mode)</p>
+          <p class="content01">自减寻址</p>
+          <p class="content01">Effective address of the operand is the contents of a register specified in the instruction. Before accessing the operand, the contents of this register are automatically decremented to point to the previous consecutive memory location. -(R1).</p>
+          <p class="content01">操作数的有效地址是指令中指定的寄存器的内容。在访问操作数之前，该寄存器的内容自动递减，指向前一个连续的内存位置。—(R1)。</p>
+          <p class="content00">Direct addressing/ Absolute addressing mode</p>
+          <p class="content01">直接寻址</p>
+          <p class="content01">The operand's offset is given in the instruction as an 8 bit or 16 bit displacement element. In this addressing mode the 16 bit effectived address of the data is the part of the instruction.</p>
+          <p class="content01">操作数的偏移量在指令中以8位或16位位移元素的形式给出。在这种寻址模式中，数据的16位有效地址是指令的一部分。</p>
+          <p class="contentformula">$$ \text{Example: ADD AL,[0301] (add the contents of offset address 0301 to AL)} $$</p>
+          <p class="content00">Indirect addressing Mode</p>
+          <p class="content01">间接寻址</p>
+          <p class="content01">In this mode address field of instruction contains the address of effective address. Here two references are required.1st reference to get effective address.2nd reference to access the data.</p>
+          <p class="content01">在这种模式下，指令的地址字段包含有效地址的地址。这里需要两个引用。第一次引用得到有效的地址。第二次引用访问数据。</p>
+          <p class="content01">Based on the availability of Effective address, Indirect mode is of two kinds:</p>
+          <p class="content01">根据有效地址的可用性，间接方式有两种:</p>
+          <p class="content00">Register Indirect</p>
+          <p class="content01">寄存器间接寻址</p>
+          <p class="content01">In this mode effective address is in the register, and corresponding register name will be maintained in the address field of an instruction. Here one register reference, one memory reference is required to access the data.</p>
+          <p class="content01">在这种模式下，有效地址保存在寄存器中，相应的寄存器名保存在指令的地址域中。这里需要一个寄存器引用，一个内存引用来访问数据。</p>
+          <p class="content00">Memory Indirect</p>
+          <p class="content01">存储器间接寻址</p>
+          <p class="content01">In this mode effective address is in the memory, and corresponding memory address will be maintained in the address field of an instruction. Here two memory reference is required to access the data.</p>
+          <p class="content01">在这种模式下，有效地址在存储器中，相应的存储器地址保存在指令的地址域中。这里需要两个内存引用来访问数据。</p>
+          <img class="img01" style="width: 70%;" src="images/slide4/s011.png" />
+          <p class="content00">Indexed addressing mode</p>
+          <p class="content01">变址寻址</p>
+          <p class="content01">The operand's offset is the sum of the content of an index register Sl or DI and an 8 bit or 16 bit displacement.</p>
+          <p class="content01">操作数的偏移量是变址寄存器Sl或DI的内容和8位或16位的位移之和。</p>
+          <p class="contentformula">$$ \text{Example: MOV AX, [SI + 05]} $$</p>
+          <p class="content00">Based Indexed Addressing</p>
+          <p class="content01">基址变址寻址</p>
+          <p class="content01">The operand's offset is sum of the content of a base register BX or BP and an index register Sl or DI.</p>
+          <p class="content01">操作数的偏移量是基址寄存器BX或BP和变址寄存器Sl或DI的内容之和。</p>
+          <p class="contentformula">$$ \text{Example: ADD AX, [BX+SI]} $$</p>
+          <p class="content00">PC relative addressing mode</p>
+          <p class="content01">PC相对寻址</p>
+          <p class="content01">PC relative addressing mode is used to implement intra-segment transfer of control, In this mode effective address is obtained by adding displacement to PC.</p>
+          <p class="content01">采用PC相对寻址方式实现段内控制的传递，该方式通过在PC上增加位移来获得有效地址。</p>
+          <p class="contentformula">$$ \text{Example: EA = PC + Address field value.} $$</p>
+          <p class="content00">Base register addressing mode</p>
+          <p class="content01">基址寄存器寻址</p>
+          <p class="content01">Base register addressing mode is used to implement inter segment transfer of control. In this mode effective address is obtained by adding base register value to address field value.</p>
+          <p class="content01">采用基址寄存器寻址方式实现控制的段间传输。在这种模式下，通过将基址寄存器值与地址字段值相加来获得有效地址。</p>
+          <p class="contentformula">$$ \text{Example: EA = Base register + Address field value.} $$</p>
+          
+          <img class="img01" style="width: 70%;" src="images/slide4/s012.png" />
+          <p class="content00">Note</p>
+          <p class="content01">PC relative and based register both addressing modes are suitable for program relocation at runtime. Based register addressing mode is best suitable to write position independent codes.</p>
+          <p class="content01">PC相对寻址模式和基址寄存器的寻址模式都适用于运行时的程序重定位。基址寄存器的寻址方式最适合编写与位置无关的代码。</p>
+          <p class="content00">Advantages of Addressing Modes</p>
+          <p class="content01">寻址模式的优点</p>
+          <p class="content01">To give programmers to facilities such as Pointers, counters for loop controls, indexing of data and program relocation. To reduce the number bits in the addressing field of the Instruction.</p>
+          <p class="content01">为程序员提供诸如指针、循环控制计数器、数据索引和程序重定位等功能。减少指令的寻址字段中的位数。</p>
+          <p class="content00">CPU</p>
+          <p class="content01">The CPU is the central processing unit of the computer that handles all instructions it receives from hardware and software running on the computer. The CPU is often referred to as the brain of the computer because many believe it thinks like a human brain.</p>
+          <p class="content01">CPU是计算机的中央处理单元，它处理从计算机上运行的硬件和软件接收到的所有指令。CPU通常被称为计算机的大脑，因为许多人认为它像人脑一样思考。</p>
+          <img class="img01" style="width: 30%;" src="images/slide4/s013.png" />
+          <p class="content00">What does the CPU do?</p>
+          <p class="content01">The CPU's main function is to take input from a peripheral (keyboard, mouse, printer, etc) or computer program, and interpret what it needs. The CPU then either outputs information to your monitor or performs the peripheral's requested task.</p>
+          <p class="content01">中央处理器的主要功能是从外设(键盘、鼠标、打印机等)或计算机程序获取输入，并解释它所需要的内容。然后CPU将信息输出到监视器或执行外设请求的任务。</p>
+          <p class="content00">Components of the CPU</p>
+          <p class="content01">CPU组件</p>
+          <p class="content01">In the CPU, there are two primary components. ALU (arithmetic logic unit) - performs mathematical, logical, and decision operations. CU (control unit) - directs all the processors operations.</p>
+          <p class="content01">在CPU中，有两个主要组件。ALU(算术逻辑单元)——执行数学、逻辑和决策操作。CU(控制单元)——指导所有处理器的操作。</p>
+          <img class="img01" style="width: 60%;" src="images/slide4/s014.png" />
+          <p class="content00">Types of CPUs</p>
+          <p class="content01">In the past, computer processors used numbers to identify the processor and help identify faster processors.  For example, the Intel 80486 (486) processor is faster than the 80386 (386) processor.  After the introduction of the Intel Pentium processor (which would technically be the 80586), all computer processors started using names like Athlon, Duron, Pentium, and Celeron. Today, in addition to the different names of computer processors, there are different architectures (32-bit and 64-bit), speeds, and capabilities.</p>
+          <p class="content01">在过去，计算机处理器使用数字来识别处理器，并帮助识别更快的处理器。例如，Intel 80486(486)处理器比80386(386)处理器快。在英特尔Pentium处理器(技术上应该是80586)推出后，所有计算机处理器都开始使用Athlon、Duron、Pentium和Celeron等名称。今天，除了计算机处理器的不同名称之外，还有不同的体系结构(32位和64位)、速度和功能。</p>
+          <p class="content00">Intel Processors</p>
+          <img class="img01" style="width: 80%;" src="images/slide4/s016.png" />
+          <p class="content00">AMD Processors</p>
+          <img class="img01" style="width: 80%;" src="images/slide4/s015.png" />
+          <p class="content00">Control Unit</p>
+          <p class="content01">控制单元</p>
+          <p class="content01">Control Unit is the part of the computer's central processing unit (CPU), which directs the operation of the processor. It is the responsibility of the Control Unit to tell the computer's memory, arithmetic/logic unit and input and output devices how to respond to the instructions that have been sent to the processor. It fetches internal instructions of the programs from the main memory to the processor instruction register, and based on this register contents, the control unit generates a control signal that supervises the execution of these instructions.</p>
+          <p class="content01">控制单元是计算机中央处理单元(CPU)的一部分，它指导处理器的操作。控制单元的职责是告诉计算机的存储器、算术/逻辑单元以及输入和输出设备如何响应发送给处理器的指令。它将程序的内部指令从主存中提取到处理器指令寄存器中，控制单元根据该寄存器的内容产生一个控制信号来监督这些指令的执行。</p>
+          <p class="content01">The control unit works by receiving input information to which it converts into control signals, which are then sent to the central processor.   The computer's processor then tells the attached hardware what operations to perform.   The functions that a controld unit performs are dependent on the type of CPU because the architecture of CPU varies from manufacturer to manufacturer.  Examples of devices that require a CU are: Control Processing Units(CPUs), Graphics Processing Units(GPUs)</p>
+          <p class="content01">控制单元的工作原理是接收输入信息，并将其转换为控制信号，然后将控制信号发送到中央处理器。然后，计算机的处理器告诉连接的硬件要执行什么操作。控制单元执行的功能取决于CPU的类型，因为CPU的体系结构因制造商而异。需要使用CU的设备包括:控制处理单元(CPU)、图形处理单元(GPU)。</p>
+          <img class="img01" style="width: 70%;" src="images/slide4/s030.png" />
+          <p class="content00">Functions of the Control Unit</p>
+          <p class="content01">控制单元的功能</p>
+          <p class="content01">It coordinates the sequence of data movements into, out of, and between a processor's many sub-units.  It interprets instrutions.  It controls data flow inside the processor.  It receives external instructions or commands to which it converts to sequence of control signals.  It controls many execution units(i.e.   ALU, data buffers and registers) contained within a CPU.   It also handles multiple tasks, such as fetching, decoding, execution handling and storing results.</p>
+          <p class="content01">它协调处理器的许多子单元以及在子单元之间的数据移动序列的输入输出。它解释指令。它控制处理器内部的数据流。它接收外部指令或命令，并将其转换为控制信号序列。它控制许多执行单元，例如:包含在CPU内的运算器、数据缓冲区和寄存器。它还处理多个任务，如获取、解码、执行处理和存储结果。</p>
+          <p class="content01">Instruction execution is facilitated by a sequence of macro and micro-operations (steps) by the control unit.   The number such micro-operations required to complete an instruction depends on the instruction and the datapath.</p>
+          <p class="content01">指令的执行由控制单元的一系列宏操作和微操作(步骤)来实现。完成一条指令所需的这种微操作的数量取决于指令和数据路径。</p>
+          <p class="content01">A program consists of a set of instructions.   Each instruction is executed with macro steps typically FETCH, DECODE, EXECUTED and RESULT WRITING.   The number of such macro steps varies with different CPU design.</p>
+          <p class="content01">程序由一组指令组成。每条指令都通过宏步骤执行，通常是FETCH、DECODE、EXECUTED和RESULT WRITING。这些宏步骤的数量因CPU设计的不同而不同。</p>
+          <p class="content01">These macro steps are also called Machine Cycles. Each of these macro steps has many sub operational steps called micro-operations. The micro-operations are the functional or atomic operations of a processor. Each micro-operation is executed in one timing state. The period of these timing states corresponds to one CPU clock cycle or multiple clock cycles.</p>
+          <p class="content01">这些宏步骤也称为机器周期。这些宏步骤中的每一个都有许多称为微操作的子操作步骤。微操作是处理器的功能操作或原子操作。每个微操作在一个定时状态下执行。这些定时状态的周期对应一个或多个CPU时钟周期。</p>
+          <p class="content00">Typical Instruction Execution Flow</p>
+          <p class="content01">典型指令执行流程</p>
+          <img class="img01" style="width: 70%;" src="images/slide4/s031.png" />
+          <p class="content01">The control unit performs two tasks: Sequencing - Causing the CPU to step through a series of micro-operations. Execution - Causing the performance of each micro-op.</p>
+          <p class="content01">控制单元执行两项任务: 序列化-控制CPU逐步完成一系列微操作。执行-控制每个微操作的执行。</p>
+          <p class="content01">The Control Unit is a state machine that generates control signals based on certain inputs. The output signals are generated based on the input conditions to the state machine. The clock drives the Control unit and synchronizes the micro-operations. The control unit issues one or more micro-operations per clock cycle.</p>
+          <p class="content01">控制单元是一种状态机，它根据某些输入产生控制信号。输出信号根据状态机的输入条件生成。时钟驱动控制单元并同步微操作。控制单元每个时钟周期发出一个或多个微操作。</p>
+          <img class="img01" style="width: 70%;" src="images/slide4/s032.png" />
+          <p class="content00">CPU’s function</p>
+          <p class="content01">CPU的功能实现</p>
+          <img class="img01" style="width: 70%;" src="images/slide4/s029.png" />
+          <img class="img01" style="width: 70%;" src="images/slide4/s019.png" />
+          <p class="content00">How to execute a program</p>
+          <p class="content01">程序的执行</p>
+          <img class="img01" style="width: 70%;" src="images/slide4/s022.png" />
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          
+          <!-- <p class="contentformula">\( m = v * k \)</p>
+          <p class="contentformula">\( i= j~mod~v \)</p>
+          <p class="contentformula">\( where \)</p> -->
+          
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+        </div>
+
+        <footer class="site-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12 col-12">
+                <p class="copyright-text">
+                  Copyright © School of IoT Engineering, WTU - Design:
+                  <a rel="sponsored" href="#">WangW</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </main>
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT FILES -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/apexcharts.min.js"></script>
+  <script src="js/custom.js"></script>
+
+  <script type="text/javascript">
+    var options = {
+      series: [13, 43, 22],
+      chart: {
+        width: 380,
+        type: "pie",
+      },
+      labels: ["Balance", "Expense", "Credit Loan"],
+      responsive: [
+        {
+          breakpoint: 480,
+          options: {
+            chart: {
+              width: 200,
+            },
+            legend: {
+              position: "bottom",
+            },
+          },
+        },
+      ],
+    };
+
+    var chart = new ApexCharts(document.querySelector("#pie-chart"), options);
+    chart.render();
+  </script>
+
+  <script type="text/javascript">
+    var options = {
+      series: [
+        {
+          name: "Income",
+          data: [44, 55, 57, 56, 61, 58, 63, 60, 66],
+        },
+        {
+          name: "Expense",
+          data: [76, 85, 101, 98, 87, 105, 91, 114, 94],
+        },
+        {
+          name: "Transfer",
+          data: [35, 41, 36, 26, 45, 48, 52, 53, 41],
+        },
+      ],
+      chart: {
+        type: "bar",
+        height: 350,
+      },
+      plotOptions: {
+        bar: {
+          horizontal: false,
+          columnWidth: "55%",
+          endingShape: "rounded",
+        },
+      },
+      dataLabels: {
+        enabled: false,
+      },
+      stroke: {
+        show: true,
+        width: 2,
+        colors: ["transparent"],
+      },
+      xaxis: {
+        categories: [
+          "Feb",
+          "Mar",
+          "Apr",
+          "May",
+          "Jun",
+          "Jul",
+          "Aug",
+          "Sep",
+          "Oct",
+        ],
+      },
+      yaxis: {
+        title: {
+          text: "$ (thousands)",
+        },
+      },
+      fill: {
+        opacity: 1,
+      },
+      tooltip: {
+        y: {
+          formatter: function (val) {
+            return "$ " + val + " thousands";
+          },
+        },
+      },
+    };
+
+    var chart = new ApexCharts(document.querySelector("#chart"), options);
+    chart.render();
+  </script>
+</body>
+
+</html>
