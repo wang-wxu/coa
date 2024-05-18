@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="description" content="" />
+  <meta name="author" content="Tooplate" />
+
+  <title>Computer Organization</title>
+
+  <!-- CSS FILES -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;700&display=swap" rel="stylesheet" />
+
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+  <link href="css/bootstrap-icons.css" rel="stylesheet" />
+
+  <link href="css/apexcharts.css" rel="stylesheet" />
+
+  <link href="css/tooplate-mini-finance.css" rel="stylesheet" />
+
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+  <!--
+
+Tooplate 2135 Mini Finance
+
+https://www.tooplate.com/view/2135-mini-finance
+
+Bootstrap 5 Dashboard Admin Template
+
+-->
+</head>
+
+<body>
+  <header class="navbar sticky-top flex-md-nowrap">
+    <div class="col-md-3 col-lg-3 me-0 px-3 fs-6">
+      <a class="navbar-brand" href="#">
+        <i class="bi-box"></i>
+        Computer Organization and Architecture
+      </a>
+    </div>
+
+    <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse"
+      data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- <form class="custom-form header-form ms-lg-3 ms-md-3 me-lg-auto me-md-auto order-2 order-lg-0 order-md-0" action="#" method="get" role="form">
+                <input id="search-input" class="form-control" name="search" type="text" placeholder="Search" aria-label="Search">
+            </form> -->
+
+    <div class="navbar-nav me-lg-2">
+      <div class="nav-item text-nowrap d-flex align-items-center">
+        <div class="dropdown ps-3">
+          <a class="nav-link dropdown-toggle text-center" href="#" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false" id="navbarLightDropdownMenuLink">
+            <i class="bi-bell"></i>
+            <span class="position-absolute start-100 translate-middle p-1 bg-danger border border-light rounded-circle">
+              <span class="visually-hidden">New alerts</span>
+            </span>
+          </a>
+
+          <ul class="dropdown-menu dropdown-menu-lg-end notifications-block-wrap bg-white shadow"
+            aria-labelledby="navbarLightDropdownMenuLink">
+            <small>Notifications</small>
+
+            <li class="notifications-block border-bottom pb-2 mb-2">
+              <a class="dropdown-item d-flex align-items-center" href="#">
+                <div class="notifications-icon-wrap bg-success">
+                  <i class="notifications-icon bi-check-circle-fill"></i>
+                </div>
+
+                <div>
+                  <span>持续更新中</span>
+                  <!-- <span>Your account has been created successfuly.</span> -->
+                  <!-- <p>12 days ago</p> -->
+                </div>
+              </a>
+            </li>
+
+            <!-- <li class="notifications-block border-bottom pb-2 mb-2">
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="notifications-icon-wrap bg-info">
+                                        <i class="notifications-icon bi-folder"></i>
+                                    </div>
+
+                                    <div>
+                                        <span>Please check. We have sent a Daily report.</span>
+
+                                        <p>10 days ago</p>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="notifications-block">
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="notifications-icon-wrap bg-danger">
+                                        <i class="notifications-icon bi-question-circle"></i>
+                                    </div>
+
+                                    <div>
+                                        <span>Account verification failed.</span>
+
+                                        <p>1 hour ago</p>
+                                    </div>
+                                </a>
+                            </li> -->
+          </ul>
+        </div>
+
+        <div class="dropdown ps-1">
+          <a class="nav-link dropdown-toggle text-center" href="#" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <i class="bi-three-dots-vertical"></i>
+          </a>
+
+          <div class="dropdown-menu dropdown-menu-social bg-white shadow">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-4 col-md-4 col-4">
+                  <a class="dropdown-item text-center" href="https://www.runoob.com/">
+                    <img src="images/social/runoob.png" class="profile-image img-fluid" alt="" />
+                    <span class="d-block">runoob</span>
+                  </a>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-4">
+                  <a class="dropdown-item text-center" href="https://cn.bing.com/">
+                    <img src="images/social/bing.jpg" class="profile-image img-fluid" alt="" />
+                    <span class="d-block">bing</span>
+                  </a>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-4">
+                  <a class="dropdown-item text-center" href="https://github.com/">
+                    <img src="images/social/github.png" class="profile-image img-fluid" alt="" />
+                    <span class="d-block">github</span>
+                  </a>
+                </div>
+
+                <!-- <div class="col-lg-4 col-md-4 col-4">
+                                        <a class="dropdown-item text-center" href="#">
+                                            <img src="images/social/snapchat.png" class="profile-image img-fluid" alt="">
+                                            <span class="d-block">Snapchat</span>
+                                        </a>
+                                    </div>
+
+                                    <div class="col-lg-4 col-md-4 col-4">
+                                        <a class="dropdown-item text-center" href="#">
+                                            <img src="images/social/tiktok.png" class="profile-image img-fluid" alt="">
+                                            <span class="d-block">Tiktok</span>
+                                        </a>
+                                    </div>
+
+                                    <div class="col-lg-4 col-md-4 col-4">
+                                        <a class="dropdown-item text-center" href="#">
+                                            <img src="images/social/youtube.png" class="profile-image img-fluid" alt="">
+                                            <span class="d-block">Youtube</span>
+                                        </a>
+                                    </div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dropdown px-3">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="images/taihu.jpg" class="profile-image img-fluid" alt="" />
+          </a>
+          <ul class="dropdown-menu bg-white shadow">
+            <li>
+              <div class="dropdown-menu-profile-thumb d-flex">
+                <img src="images/better.png" class="profile-image img-fluid me-3" alt="" />
+
+                <div class="d-flex flex-column">
+                  <small>Wang</small>
+                  <a href="#">wangw@wxu.edu.cn</a>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <a class="dropdown-item" href="http://gxy.wxu.edu.cn/">
+                <!-- <i class="bi-person me-2"></i> -->
+                <!-- Profile -->
+                School of IoT Engineering
+              </a>
+            </li>
+
+            <li>
+              <a class="dropdown-item" href="http://www.wxu.edu.cn/">
+                <!-- <i class="bi-gear me-2"></i>
+                                    Settings -->
+                Wuxi Taihu University
+              </a>
+            </li>
+
+            <!-- <li>
+                                <a class="dropdown-item" href="help-center.html">
+                                    <i class="bi-question-circle me-2"></i>
+                                    Help
+                                </a>
+                            </li>
+
+                            <li class="border-top mt-3 pt-2 mx-4">
+                                <a class="dropdown-item ms-0 me-0" href="#">
+                                    <i class="bi-box-arrow-left me-2"></i>
+                                    Logout
+                                </a>
+                            </li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container-fluid">
+    <div class="row">
+      <nav id="sidebarMenu" class="col-md-3 col-lg-3 d-md-block sidebar collapse">
+        <div class="position-sticky py-4 px-3 sidebar-sticky">
+          <ul class="nav flex-column h-100">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">
+                <i class="bi-house-fill me-2"></i>
+                课程概述
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="section11.html">
+                <i class="bi-wallet me-2"></i>
+                绪论
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="section22.html">
+                <i class="bi-wallet me-2"></i>
+                运算器
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="section33.html">
+                <i class="bi-wallet me-2"></i>
+                存贮器
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="section44.html">
+                <i class="bi-wallet me-2"></i>
+                指令&CPU
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="section55.html">
+                <i class="bi-wallet me-2"></i>
+                I/O系统
+              </a>
+            </li>
+
+            <!-- <li class="nav-item">
+                                <a class="nav-link" href="profile.html">
+                                    <i class="bi-person me-2"></i>
+                                    Profile
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="setting.html">
+                                    <i class="bi-gear me-2"></i>
+                                    Settings
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="help-center.html">
+                                    <i class="bi-question-circle me-2"></i>
+                                    Help Center
+                                </a>
+                            </li> -->
+
+            <!-- <li class="nav-item featured-box mt-lg-5 mt-4 mb-4"> -->
+            <li class="custom-block custom-block-profile-front custom-block-profile text-center bg-white">
+              <a href="http://gxy.wxu.edu.cn/">
+                <img src="images/iot.png" class="img-fluid" alt="" />
+              </a>
+              <!-- <a class="btn custom-btn" href="#">IoT Engineering</a> -->
+            </li>
+
+            <li class="nav-item border-top mt-auto pt-2">
+              <a class="nav-link" href="http://gxy.wxu.edu.cn/">
+                <!-- <i class="bi-box-arrow-left me-2"></i> -->
+                School of Internet of Things Engineering
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <main class="main-wrapper col-md-9 ms-sm-auto py-4 col-lg-9 px-md-4 border-start" id="main-content">
+        <div class="title-group mb-3">
+          <h1 class="h2 mb-0">I/O系统</h1>
+          <!-- <p>计算机组成与结构</p> -->
+
+          <!-- <small class="text-muted">计算机组成与结构</small> -->
+        </div>
+
+        <div class="custom-block bg-white">
+           
+          <!-- <p class="contentformula">\( (3\mathrm{A})_{16}=(00111010)_2 \)</p> -->
+          
+          <!-- <p class="contentformula">$$ \textit{the range from 0 to 2}^w-1 $$</p> -->
+
+          <!-- <img class="img01" style="width: 60%;" src="images/slide4/s001.png" /> -->
+
+          <!-- <p class="contentformula">$$ \text{Example: MOV AX,CX (move the contents of CX)} $$</p> -->
+          
+          <p class="content00">I/O Communication</p>
+          <p class="content01">计算机I/O通信</p>
+          
+          <p class="content01">In a Computer System, in addition to the CPU and Main Memory, Input/Output (I/O) is a major functional subsystem. Input/Output System provides a mechanism for communication between the CPU and the external world. I/O subsystem connects the external devices like Keyboard, Mouse, Monitor, Joystick, Pendrive and internal devices like Hard Disk, CD to the Computer.</p>
+          <p class="content01">在计算机系统中，除了中央处理器和主存储器之外，输入/输出(I/O)是一个主要的功能子系统。输入输出系统为CPU和外部设备之间的通信提供了一种机制。I/O子系统将键盘、鼠标、显示器、操纵杆、驱动器等外部设备和硬盘、CD等内部设备连接到计算机上。</p>
+          <p class="content01">We know the functioning principles and characteristics of these devices are widely different from each other. So, what can simplify the technical issues involved in connecting these wide varieties of devices? The answer is to establish applicable communication standard(s).</p>
+          <p class="content01">我们知道这些设备的工作原理和特性彼此之间有很大的不同。那么，怎样才能简化连接这些种类繁多的设备所涉及的技术问题呢?答案是建立适用的通信标准。</p>
+          <p class="content00">Intra System and Inter System Comncatns</p>
+          <p class="content01">系统内和系统间通讯</p>  
+          <img class="img01" style="width: 70%;" src="images/slide5/s001.png" />
+          <p class="content01">Whether it is Intra or Inter System Communication, a medium is required to carry the communication and also a protocol or standard to carry out the communication successfully. The most familiar one is the Internet as a Wired or Wireless communication. It has protocol standards defined by IEEE. Similarly, every device has a communication protocol which is called the Interface Standard.</p>
+          <p class="content01">无论是系统内通信还是系统间通信，都需要一种媒介来进行通信，也需要一种协议或标准来成功地进行通信。最熟悉的是作为有线或无线通信的互联网。它具有IEEE定义的协议标准。类似地，每个设备都有一个称为接口标准的通信协议。</p>
+          <p class="content00">System Bus</p>
+          <p class="content01">系统总线</p>
+          <p class="content01">The medium and the protocol together is called a BUS.   A Bus is a shared communication link consisting of a set of connecting cables/wires which carry signals that are required as per the Interface Standard's definition.   A bus facilitates to achieve thed "Where- What -How" of the Communication amongst the various subsystems.  We will focus on Internal communication carried out by System bus.   A system Bus has three components Address, Data and Control Signals.</p>
+          <p class="content01">媒体和协议一起被称为总线。总线是一种共享的通信链路，由一组连接电缆/电线组成，这些电缆/电线根据接口标准的定义携带所需的信号。总线有助于实现各个子系统之间“何处-什么-如何”的通信。我们将重点讨论通过系统总线进行的内部通信。系统总线由地址、数据和控制信号三部分组成。</p>
+          <img class="img01" style="width: 70%;" src="images/slide5/s002.png" />
+          <p class="content00"> I/O Controller</p>
+          <p class="content01"> I/O控制器</p>
+          <p class="content01">I/O Controller will typically have Data Register(s), Status Register(s), Control Register(s), Address decoding logic and Control Circuitry.  The I/O Controller is connected to the system bus.  Whenever the I/O controller wants to use the bus, it has to contend and obtain.  All communication from the CPU and Memory happens via these registers shown in the diagram.  These registers are given a unique address for each I/O controller.</p>
+          <p class="content01">I/O控制器通常有数据寄存器、状态寄存器、控制寄存器、地址解码逻辑和控制电路。I/O控制器连接到系统总线上。每当I/O控制器想要使用总线时，它都必须进行争用和获取。所有来自CPU和内存的通信都通过图中所示的这些寄存器进行。这些寄存器为每个I/O控制器提供一个唯一的地址。</p>
+          <img class="img01" style="width: 70%;" src="images/slide5/s003.png" />
+          <p class="content00">Input Devices</p>
+          <p class="content01">输入设备</p>
+          <p class="content01">Input device enables the user to send data, information, or control signals to a computer. The Central Processing Unit (CPU) of a computer receives the input and processes it to produce the output.</p>
+          <p class="content01">输入设备使用户能够向计算机发送数据、信息或控制信号。计算机的中央处理单元(CPU)接收输入并对其进行处理以产生输出。</p>
+          <img class="img01" style="width: 70%;" src="images/slide5/s007.jpg" />
+          <p class="content00">Output Devices</p>
+          <p class="content01">输出设备</p>
+          <p class="content01">The output device displays the result of the processing of raw data that is entered in the computer through an input device. There are a number of output devices that display output in different ways such as text, images, hard copies, and audio or video.</p>
+          <p class="content01">输出设备显示通过输入设备输入计算机的原始数据的处理结果。有许多输出设备以不同的方式显示输出，如文本、图像、硬拷贝、音频或视频。</p>
+          <img class="img01" style="width: 70%;" src="images/slide5/s005.png" />
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          
+          <!-- <p class="contentformula">\( m = v * k \)</p>
+          <p class="contentformula">\( i= j~mod~v \)</p>
+          <p class="contentformula">\( where \)</p> -->
+          
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+          <p class="content01"></p>
+        </div>
+
+        <footer class="site-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12 col-12">
+                <p class="copyright-text">
+                  Copyright © School of IoT Engineering, WTU - Design:
+                  <a rel="sponsored" href="#">WangW</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </main>
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT FILES -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/apexcharts.min.js"></script>
+  <script src="js/custom.js"></script>
+
+  <script type="text/javascript">
+    var options = {
+      series: [13, 43, 22],
+      chart: {
+        width: 380,
+        type: "pie",
+      },
+      labels: ["Balance", "Expense", "Credit Loan"],
+      responsive: [
+        {
+          breakpoint: 480,
+          options: {
+            chart: {
+              width: 200,
+            },
+            legend: {
+              position: "bottom",
+            },
+          },
+        },
+      ],
+    };
+
+    var chart = new ApexCharts(document.querySelector("#pie-chart"), options);
+    chart.render();
+  </script>
+
+  <script type="text/javascript">
+    var options = {
+      series: [
+        {
+          name: "Income",
+          data: [44, 55, 57, 56, 61, 58, 63, 60, 66],
+        },
+        {
+          name: "Expense",
+          data: [76, 85, 101, 98, 87, 105, 91, 114, 94],
+        },
+        {
+          name: "Transfer",
+          data: [35, 41, 36, 26, 45, 48, 52, 53, 41],
+        },
+      ],
+      chart: {
+        type: "bar",
+        height: 350,
+      },
+      plotOptions: {
+        bar: {
+          horizontal: false,
+          columnWidth: "55%",
+          endingShape: "rounded",
+        },
+      },
+      dataLabels: {
+        enabled: false,
+      },
+      stroke: {
+        show: true,
+        width: 2,
+        colors: ["transparent"],
+      },
+      xaxis: {
+        categories: [
+          "Feb",
+          "Mar",
+          "Apr",
+          "May",
+          "Jun",
+          "Jul",
+          "Aug",
+          "Sep",
+          "Oct",
+        ],
+      },
+      yaxis: {
+        title: {
+          text: "$ (thousands)",
+        },
+      },
+      fill: {
+        opacity: 1,
+      },
+      tooltip: {
+        y: {
+          formatter: function (val) {
+            return "$ " + val + " thousands";
+          },
+        },
+      },
+    };
+
+    var chart = new ApexCharts(document.querySelector("#chart"), options);
+    chart.render();
+  </script>
+</body>
+
+</html>
